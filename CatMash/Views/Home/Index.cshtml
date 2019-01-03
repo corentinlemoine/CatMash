@@ -1,0 +1,25 @@
+﻿@model CatMash.Models.VoteModelView
+@{
+    ViewData["Title"] = "CatMash - Accueil";
+}
+
+<div style="position:absolute;width:100%;">
+    <img src="~/images/Logo.png" class="logo">
+</div>
+
+<div id="contentImgGauche" class="contentImg bgContentImgGauche">
+    <img id="imgGauche" class="imgChat imgCenter" src="@Model.SelectedCats[0].URL" val="@Model.SelectedCats[0].ID" />
+</div>
+<div id="contentImgDroite" class="contentImg bgContentImgDroite">
+    <img id="imgDroite" class="imgChat imgChatDroite imgCenter" src="@Model.SelectedCats[1].URL" val="@Model.SelectedCats[1].ID" />
+</div>
+
+<div class="bottomCenter" style="bottom: 80px">
+    <center class="titre">CAT MASH</center>
+</div>
+<div class="bottomCenter foot">
+    <a asp-area="" asp-controller="Home" asp-action="Scores">
+        <span class="textFoot">Voir les plus beaux chats</span>
+        <span id="votes" class="textFoot">@Model.Votes votes</span>
+    </a>
+</div>

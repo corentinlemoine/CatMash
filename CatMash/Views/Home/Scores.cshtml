@@ -1,0 +1,34 @@
+﻿@model CatMash.Models.VoteModelView
+@{
+    ViewData["Title"] = "CatMash - Scores";
+    Layout = "~/Views/Shared/_LayoutScore.cshtml";
+}
+
+@for (int i = 0; i < Model.Cats.Count; i += 3)
+{
+    var c1 = Model.Cats[i];
+    <div class="col-md-4">
+        <img src="@c1.URL" class="imgScore" />
+        <div class="score">@c1.Score</div>
+    </div>
+
+    try
+    {
+        var c2 = Model.Cats[i + 1];
+    <div class="col-md-4">
+        <img src="@c2.URL" class="imgScore" />
+        <div class="score">@c2.Score</div>
+    </div>
+    }
+    catch { }
+
+    try
+    {
+        var c3 = Model.Cats[i + 2];
+    <div class="col-md-4">
+        <img src="@c3.URL" class="imgScore" />
+        <div class="score">@c3.Score</div>
+    </div>
+    }
+    catch { }
+}

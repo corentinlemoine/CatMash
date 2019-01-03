@@ -1,0 +1,118 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding: 0px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding: 0px;
+}
+
+.logo {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    margin-left: -125px;
+}
+
+.contentImg {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+.bgContentImgGauche {
+    background: #ecf0f0;
+}
+.bgContentImgDroite {
+    background: #f7f7f7;
+}
+
+.titre {
+    font-family: Arial;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.imgChat {
+    border-radius: 100px 100px 200px 200px;
+    -moz-border-radius: 100px 100px 200px 200px;
+    -webkit-border-radius: 100px 100px 200px 200px;
+    border: 10px solid #ffffff;
+}
+    .imgChat:hover {
+        cursor: pointer;
+        border-color: #1b92e2;
+    }
+
+.imgChatDroite {
+    border: 10px solid #ecf0f0;
+}
+
+.bottomCenter {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 400px;
+    height: 90px;
+}
+
+.imgCenter {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px; 
+    margin-left: -200px; 
+}
+
+.foot {
+    border-left: 5px solid #ecf0f0;
+    border-top: 5px solid #ecf0f0;
+    border-right: 5px solid #ecf0f0;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 15px;
+    background: white;
+    text-align: center;
+}
+
+.textFoot {
+    font-family: Arial;
+    font-size: 19px;
+    float: left;
+    width: 100%;
+}
+
+.imgScore {
+    display: block;
+    height: 400px;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.score {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-top: 1px;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+    width: 50px;
+    height: 30px;
+    background: white;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border: 4px solid #ecf0f0;
+}
