@@ -16,29 +16,23 @@ $('#imgDroite').click(function () {
 });
 
 function callAjaxCats(catId) {
-    var data = {
-        ID: catId
-    };
-
     $.ajax({
         type: "POST",
         url: '/Home/AddScoreToCat',
         contentType: "application/json",
         dataType: "json",
-        data: JSON.stringify(data),
+        data: JSON.stringify(catId),
         success: function (data) {
-            if (data.length === 3) {
-                console.log(data[0].url);
-                console.log(data[1].url);
+            console.log(data["nextCat1"].url);
+            console.log(data["nextCat1"].url);
 
-                $('#imgGauche').attr("src", data[0].url);
-                $('#imgGauche').attr("val", data[0].id);
+            $('#imgGauche').attr("src", data["nextCat1"].url);
+            $('#imgGauche').attr("val", data["nextCat1"].id);
 
-                $('#imgDroite').attr("src", data[1].url);
-                $('#imgDroite').attr("val", data[1].id);
+            $('#imgDroite').attr("src", data["nextCat2"].url);
+            $('#imgDroite').attr("val", data["nextCat2"].id);
 
-                $('#votes').text(data[2].score + " votes");
-            }
+            $('#votes').text(data["votes"] + " votes");
         }
     });
 }

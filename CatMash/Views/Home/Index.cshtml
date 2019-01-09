@@ -1,4 +1,4 @@
-﻿@model CatMash.Models.VoteModelView
+﻿@model CatMash.Models.NextCats
 @{
     ViewData["Title"] = "CatMash - Accueil";
 }
@@ -8,10 +8,10 @@
 </div>
 
 <div id="contentImgGauche" class="contentImg bgContentImgGauche">
-    <img id="imgGauche" class="imgChat imgCenter" src="@Model.SelectedCats[0].URL" val="@Model.SelectedCats[0].ID" />
+    <img id="imgGauche" class="imgChat imgCenter" src="@Model.NextCat1.URL" val="@Model.NextCat1.ID" />
 </div>
 <div id="contentImgDroite" class="contentImg bgContentImgDroite">
-    <img id="imgDroite" class="imgChat imgChatDroite imgCenter" src="@Model.SelectedCats[1].URL" val="@Model.SelectedCats[1].ID" />
+    <img id="imgDroite" class="imgChat imgChatDroite imgCenter" src="@Model.NextCat2.URL" val="@Model.NextCat2.ID" />
 </div>
 
 <div class="bottomCenter" style="bottom: 80px">
